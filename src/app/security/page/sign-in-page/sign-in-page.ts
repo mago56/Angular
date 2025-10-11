@@ -15,4 +15,8 @@ export class SignInPage {
   protected passwordConfig:FloatInputConfig = {
     type:'password', label:'password' , defaultValue:''
   }
+
+  protected usernameConfig:FloatInputConfig = {
+    type:'text', label:'username' , defaultValue:'Mago'
+  }
 }
