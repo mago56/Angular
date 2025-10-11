@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Input } from './input';
+import { FloatInput } from './float-input';
 
-describe('Input', () => {
-  let component: Input;
-  let fixture: ComponentFixture<Input>;
+describe('FloatInput', () => {
+  let component: FloatInput;
+  let fixture: ComponentFixture<FloatInput>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Input]
+      imports: [FloatInput]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Input);
+    fixture = TestBed.createComponent(FloatInput);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

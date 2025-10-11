@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
-import {Input} from '../../../shared/ui/form/component/input/input';
+import {FloatInput} from '../../../shared/ui/form/component/float-input/float-input';
+import {FloatInputConfig} from '../../../shared/ui/form/model/float-input.config';
 
 @Component({
   selector: 'app-sign-in-page',
   imports: [
-    Input
+    FloatInput
   ],
   templateUrl: './sign-in-page.html',
   standalone : true,
   styleUrl: './sign-in-page.scss'
 })
 export class SignInPage {
-
+  protected passwordConfig:FloatInputConfig = {
+    type:'password', label:'password' , defaultValue:''
+  }
 }
