@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-common-fall-back-page',
   imports: [],
   templateUrl: './common-fall-back-page.html',
+  standalone: true,
   styleUrl: './common-fall-back-page.scss'
 })
 export class CommonFallBackPage {
