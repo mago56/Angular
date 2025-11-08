@@ -15,11 +15,11 @@ import {JsonPipe} from '@angular/common';
 })
 export class SignInPage {
   protected passwordConfig:FloatInputConfig = {
-    type:'password', label:'password' , defaultValue:''
+    type:'password', label:'password' , defaultValue:'Entrez votre mot de passe'
   }
 
   protected usernameConfig:FloatInputConfig = {
-    type:'text', label:'username' , defaultValue:'Mago'
+    type:'text', label:'username' , defaultValue:'Entrez votre identifiant'
   }
 
   onClickEventHandler(data: FloatInputConfig) {
