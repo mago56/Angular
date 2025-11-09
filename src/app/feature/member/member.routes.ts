@@ -8,8 +8,8 @@ export const memberRoutes:Routes = [
   },
 
   {
-    path: 'detail/:id',
-    loadComponent: () => import('./page/member-detail-page/member-detail-page')
+    path: `${AppNode.DETAIL}/:id`,
+    loadComponent: () => import('./page')
       .then(c => c.MemberDetailPage)
   }
 ]
