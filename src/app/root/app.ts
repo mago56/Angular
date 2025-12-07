@@ -11,11 +11,9 @@ import {ApiResponse} from '../shared/api/data/response/api.response';
   standalone : true,
   styleUrl: './app.scss'
 })
-export class App implements OnInit{
+export class App {
   protected readonly title = signal('App');
   private readonly api: ApiService = inject(ApiService);
 
-  ngOnInit() {
-    this.api.get('main').subscribe((data: ApiResponse)=>console.log('data' , data));
-  }
+
 }

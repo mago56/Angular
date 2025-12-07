@@ -30,6 +30,6 @@ export class TokenService {
   }
 
   private getEmpty(): Token {
-    return {token: '', refreshToken: ''};
+    return {token: '', refreshToken: '' , isEmpty: true} as Token;
   }
 }
