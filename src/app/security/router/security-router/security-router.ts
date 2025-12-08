@@ -1,13 +1,13 @@
 import {Component, inject, OnInit, signal, WritableSignal} from '@angular/core';
 import { tap} from 'rxjs';
 import {MemberService} from '../../../feature/member/service/member.service';
-import {JsonPipe} from '@angular/common';
+import {RouterOutlet} from '@angular/router';
 
 
 @Component({
   selector: 'app-security-router',
   imports: [
-    JsonPipe
+    RouterOutlet
   ],
   templateUrl: './security-router.html',
   standalone: true,

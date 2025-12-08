@@ -1,9 +1,10 @@
 
 import {environment} from '../../../../environments/environment';
-import {effect, EffectRef, signal, WritableSignal} from '@angular/core';
+import {effect, EffectRef, Injectable, signal, WritableSignal} from '@angular/core';
 import {Token} from '../data';
 import { isNil } from "lodash";
 
+@Injectable({providedIn: 'root'})
 export class TokenService {
   token$: WritableSignal<Token> = signal(this.getToken());
   private readonly tokenSaveHandler: EffectRef = effect(() => this.handleTokenChange(this.token$()));
