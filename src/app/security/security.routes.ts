@@ -9,6 +9,11 @@ export const securityRoutes:Routes =[
         path:'',
         loadComponent:()=> import('./page').then(p=>p.SignInPage)
       },
+
+      {
+        path: 'signup',
+        loadComponent: () => import('./page').then(p => p.SignUpPage)
+      }
     ]
   }
 ]

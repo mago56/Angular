@@ -47,13 +47,12 @@ export class SecurityService {
     this.tokenService.setToken({token: '' , refreshToken:'' , isEmpty: true});
   }
 
-  private handleAuthenticatedChange(isAuthenticated:boolean):void {
+
+  private handleAuthenticatedChange(isAuthenticated: boolean): void {
     console.log('response', this.tokenService.token$());
     if (isAuthenticated) {
-
       this.api.get(APIURI.ME)
         .pipe(tap((response: ApiResponse) => {
-
           if (response.result) {
             this.account$.set(CredentialUtilService.fromDTO(response.data));
             if (!window.location.pathname.startsWith('/' + AppNode.REDIRECT_TO_AUTHENTICATED)) {
@@ -64,11 +63,11 @@ export class SecurityService {
           }
         }))
         .subscribe();
-    }else{
-
-      this.router.navigate([AppNode.REDIRECT_TO_PUBLIC]).then();
+    } else {
+      if (!window.location.pathname.startsWith('/' + AppNode.PUBLIC)) {
+        this.router.navigate([AppNode.REDIRECT_TO_PUBLIC]).then();
+      }
     }
-
   }
 }
 

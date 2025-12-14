@@ -1,8 +1,5 @@
-import {Component, inject, OnInit, signal, WritableSignal} from '@angular/core';
-import { tap} from 'rxjs';
-import {MemberService} from '../../../feature/member/service/member.service';
+import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-
 
 @Component({
   selector: 'app-security-router',
@@ -13,22 +10,5 @@ import {RouterOutlet} from '@angular/router';
   standalone: true,
   styleUrl: './security-router.scss'
 })
-export class SecurityRouter implements OnInit{
-  memberService: MemberService = inject(MemberService);
-  profiles$: WritableSignal<any[]> = signal([]);
-
-
-  ngOnInit(): void{
-  this.memberService.getList()
-    .pipe(
-      tap((profiles : any[]) =>{
-        this.profiles$.set(profiles);
-      })
-    )
-    .subscribe();
-
-
-  }
-
-
+export class SecurityRouter {
 }
